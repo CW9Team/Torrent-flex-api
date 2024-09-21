@@ -1,0 +1,19 @@
+[flake8]
+max-line-length = 100
+exclude =
+    .git,
+    build,
+    dist,
+
+ignore = E203, W503
+
+# Select specific warnings and errors
+# E: Errors, W: Warnings, F: Pyflakes Errors, C: Cyclomatic Complexity,
+# B: Bugs
+select = E, W, F, C, B
+
+show-source = True
+
+max-complexity = 10
+
+statistics = True

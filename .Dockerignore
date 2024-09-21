@@ -1,0 +1,7 @@
+tests/
+.git/
+.flak8
+.pre-commit-config.yaml
+README.md
+*.pyc
+__pycache__/
