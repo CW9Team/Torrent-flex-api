@@ -21,6 +21,7 @@ ENV/
 
 # Pytest and coverage files
 .cache/
+**/caches/pypoetry/
 coverage/
 htmlcov/
 .tox/
@@ -35,3 +36,5 @@ coverage.xml
 *.log
 *.out
 *.err
+
+*.whl
