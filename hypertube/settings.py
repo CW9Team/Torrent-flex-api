@@ -36,7 +36,11 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 # SECURITY WARNING: dont run with debug turned on in production!
 DEBUG = env('DJANGO_DEBUG')
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default = ['localhost'])
+=======
+ALLOWED_HOSTS = []
+>>>>>>> 4429fd00206cf13fd80d4331a8f0ce81e4905ffd
 
 
 # Application definition
@@ -53,7 +57,10 @@ INSTALLED_APPS = [
     'rest_framework',
 
     # created apps
+<<<<<<< HEAD
     'health',
+=======
+>>>>>>> 4429fd00206cf13fd80d4331a8f0ce81e4905ffd
     'auths'
 ]
 
@@ -91,6 +98,7 @@ WSGI_APPLICATION = 'hypertube.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+<<<<<<< HEAD
 DATABASE_URL = f"postgres://{env('POSTGRES_USER')}:{env('POSTGRES_PASSWORD')}"\
             f"@{env('DATABASE_HOST')}:{env('DATABASE_PORT')}/{env('POSTGRES_DB')}"
 
@@ -99,6 +107,10 @@ DATABASES = {
         default=DATABASE_URL,
         conn_max_age= 600,
         ssl_require= False),
+=======
+DATABASES = {
+    'default': dj_database_url.config(default=env('DATABASE_URL'))
+>>>>>>> 4429fd00206cf13fd80d4331a8f0ce81e4905ffd
 }
 
 
