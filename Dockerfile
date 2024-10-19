@@ -7,6 +7,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev \
+    ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Poetry
@@ -35,13 +36,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copy installed packages from builder stage
 COPY --from=builder /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
-
 # Copy project files
 COPY . .
 
 # Create a non-root user and switch to it
-RUN useradd -m appuser
-USER appuser
+# RUN useradd -m appuser
+# USER appuser
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
