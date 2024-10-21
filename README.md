@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Hypertube
 
 ## Project Overview
@@ -53,5 +52,3 @@ Before you start, ensure you have the following tools installed:
    Run the following command
    ```bash
    cp .env.example .env
-=======
->>>>>>> 15edbe2... feat: set up project structure
