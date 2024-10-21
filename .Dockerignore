@@ -1,0 +1,12 @@
+tests/
+.git/
+.flak8
+.pre-commit-config.yaml
+README.md
+*.pyc
+__pycache__/
+<<<<<<< HEAD
+.vscode
+check_dependencies.sh 
+=======
+>>>>>>> 15edbe2... feat: set up project structure
