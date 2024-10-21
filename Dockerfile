@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Stage 1: Build dependencies
 FROM python:3.12-slim AS builder
 
@@ -53,3 +54,18 @@ EXPOSE 8000
 
 # Run the application
 CMD ["gunicorn", "hypertube.wsgi:application", "--bind", "0.0.0.0:8000"]
+=======
+FROM python:3.11-slim
+
+WORKDIR /app
+RUN apt-get update \
+    && apt-get install -y gcc libpq-dev \
+    && apt-get clean
+
+COPY puprofect.toml poetry.lock /app/
+RUN pip install poetry \
+    &&  poetry config virtualenvs.create false \
+    && poetry install --no-interaction --no-ansi
+
+COPY . /app/
+>>>>>>> 15edbe2... feat: set up project structure

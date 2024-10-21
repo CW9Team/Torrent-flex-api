@@ -7,6 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+<<<<<<< HEAD
 psycopg2-binary = "^2.9.9"
 dj-database-url = "^2.2.0"
 python-decouple = "^3.8"
@@ -14,6 +15,12 @@ django-environ = "^0.11.2"
 django = "^5.1.2"
 djangorestframework = "^3.15.2"
 httpie = "^3.2.3"
+=======
+djangorestframework = "^3.15.2"
+psycopg2-binary = "^2.9.9"
+dj-database-url = "^2.2.0"
+python-decouple = "^3.8"
+>>>>>>> 15edbe2... feat: set up project structure
 
 
 [tool.poetry.group.dev.dependencies]

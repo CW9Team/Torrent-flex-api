@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+<<<<<<< HEAD
 import dj_database_url
 import environ
 import os
@@ -22,21 +23,44 @@ env = environ.Env(
     DATABASE_PORT=(int, 5432)
 )
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+=======
+
+from pathlib import Path
+import dj_database_url
+from decouple import config
+
+
+>>>>>>> 15edbe2... feat: set up project structure
 # added config
 #  if a migration fails, the changes are rolled back.
 ATOMIC_REQUESTS = True
 
+<<<<<<< HEAD
+=======
+# Build paths inside the project like this: BASE_DIR / subdir.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+>>>>>>> 15edbe2... feat: set up project structure
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: dont run with debug turned on in production!
 DEBUG = env('DJANGO_DEBUG')
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default = ['localhost'])
+=======
+SECRET_KEY = 'django-insecure-@7z+03%hj*$--)3-zh^cy^r_qdk5cho+12=@c2oo2-sk!w7sc8'
+
+# SECURITY WARNING: dont run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = []
+>>>>>>> 15edbe2... feat: set up project structure
 
 
 # Application definition
@@ -53,7 +77,10 @@ INSTALLED_APPS = [
     'rest_framework',
 
     # created apps
+<<<<<<< HEAD
     'health',
+=======
+>>>>>>> 15edbe2... feat: set up project structure
     'auths'
 ]
 
@@ -91,6 +118,7 @@ WSGI_APPLICATION = 'hypertube.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+<<<<<<< HEAD
 DATABASE_URL = f"postgres://{env('POSTGRES_USER')}:{env('POSTGRES_PASSWORD')}"\
             f"@{env('DATABASE_HOST')}:{env('DATABASE_PORT')}/{env('POSTGRES_DB')}"
 
@@ -99,6 +127,10 @@ DATABASES = {
         default=DATABASE_URL,
         conn_max_age= 600,
         ssl_require= False),
+=======
+DATABASES = {
+    'default': dj_database_url.config(default=config('DATABASE_URL'))
+>>>>>>> 15edbe2... feat: set up project structure
 }
 
 
@@ -142,6 +174,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+<<<<<<< HEAD
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASS': [
@@ -163,3 +196,5 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ]
 }
+=======
+>>>>>>> 15edbe2... feat: set up project structure

@@ -1,5 +1,8 @@
 [flake8]
+<<<<<<< HEAD
 format = %(path)s:%(row)d:%(col)d: %(code)s %(text)s
+=======
+>>>>>>> 15edbe2... feat: set up project structure
 max-line-length = 100
 exclude =
     .git,

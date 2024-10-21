@@ -1,5 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
+<<<<<<< HEAD
     rev: v4.4.0
     hooks:
       - id: trailing-whitespace
@@ -15,3 +16,16 @@ repos:
         entry: flake8
         language: python
         types: [python]
+=======
+    rev: v2.3.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-merge-conflict
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+>>>>>>> 15edbe2... feat: set up project structure
