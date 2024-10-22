@@ -21,10 +21,7 @@ ENV/
 
 # Pytest and coverage files
 .cache/
-<<<<<<< HEAD
 **/caches/pypoetry/
-=======
->>>>>>> 15edbe2... feat: set up project structure
 coverage/
 htmlcov/
 .tox/
@@ -39,8 +36,6 @@ coverage.xml
 *.log
 *.out
 *.err
-<<<<<<< HEAD
 
 *.whl
-=======
->>>>>>> 15edbe2... feat: set up project structure
+*.log

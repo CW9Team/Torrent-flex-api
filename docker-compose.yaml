@@ -23,7 +23,8 @@ services:
       start_period: 30s
     networks:
       - hypertube-network
-
+    volumes:
+      - .:/app
 
   database:
     container_name: database
